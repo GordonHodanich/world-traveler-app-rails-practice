@@ -1,0 +1,6 @@
+<h1><%= @country.name %></h1>
+<p><%= @country.description %></p>
+
+<% @country.vacations.where(country: @country).each do |vacation| %>
+<%= vacation.traveler.name %>
+<% end %>
